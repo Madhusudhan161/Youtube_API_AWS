@@ -41,6 +41,11 @@ def index():
             thumbnail_urls = []
             details = []
 
+            ## creating csv file
+            fw = open("data.csv", "w")
+            headers = "Title, Views, Uploaded, videoLink, ThumbnailLink \n"
+            fw.write(headers)
+
             ## using for loop to get values we need 
             for i in items:
                 ## getting video ID and adinf youtube url
