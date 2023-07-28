@@ -4,16 +4,19 @@ from flask import Flask, render_template, request
 from flask_cors import CORS,cross_origin
 import requests
 
-## creating flask app instance
-app = Flask(__name__)
+#@ initializing the flask app
+application = Flask(__name__) 
+app=application
 
 ## routing to index.html by default 
 @app.route("/", methods = ['GET'])
+@cross_origin()
 def homepage():
     return render_template("index.html") ## rendering html
 
 ## routing to result page to show the data
-@app.route("/result" , methods = ['POST' , 'GET']) 
+@app.route("/result" , methods = ['POST' , 'GET'])
+@cross_origin()
 def index():
         try:
             api_key = "AIzaSyBjCXRf9LqbY9R1yfK4RqBLfI-uIwQMdlM"
