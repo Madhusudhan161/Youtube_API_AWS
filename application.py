@@ -3,7 +3,6 @@ from googleapiclient.discovery import build
 from flask import Flask, render_template, request
 from flask_cors import CORS,cross_origin
 import requests
-import csv
 
 ## creating flask app instance
 app = Flask(__name__)
@@ -81,11 +80,6 @@ def index():
 
             ## returning the data to html    
             return render_template('result.html', reviews=details)
-
-            ## storing results into a csv file 
-            with open("data.csv",mode="w",newline='',encoding='UTF-8') as file:
-                writer = csv.writer(file)
-                writer.writerows(details)
 
         except Exception as e:
             return 'something is wrong'
