@@ -19,7 +19,7 @@ def homepage():
 @cross_origin()
 def index():
         try:
-            api_key = "AIzaSyBjCXRf9LqbY9R1yfK4RqBLfI-uIwQMdlM"
+            api_key = "YOUR_API_KEY" ## replace with your own api key
             channel_id = "UCphU2bAGmw304CFAzy0Enuw"
             uploads_id = "UUphU2bAGmw304CFAzy0Enuw"
 
